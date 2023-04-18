@@ -24,4 +24,11 @@ public class JobServiceImpl implements JobService{
         List<Job> jobs = jobDAOApiService.getJobsFromAPI();
         return jobs.stream().map(j -> mapper.toDto(j)).collect(Collectors.toList());
     }
+
+    @Override
+    public JobDTO getJob(String id) {
+        Job job = jobDAOApiService.getJobFromAPI(id);
+
+        return job != null ? mapper.toDto(job) : null;
+    }
 }

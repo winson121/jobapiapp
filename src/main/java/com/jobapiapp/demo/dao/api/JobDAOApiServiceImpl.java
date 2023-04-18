@@ -7,6 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,5 +40,22 @@ public class JobDAOApiServiceImpl implements JobDAOApiService{
         List<Job> jobPositions = jobFlux.collectList().block();
 
         return jobPositions;
+    }
+
+    @Override
+    public Job getJobFromAPI(String id) {
+
+        String positionUrl = jobRecruitmentPositionUrl+"/"+id;
+
+        Job job;
+
+        WebClient client = WebClient.create(positionUrl);
+        Mono<Job> jobMono = client.get()
+                                .accept(MediaType.APPLICATION_JSON)
+                                .retrieve()
+                                .bodyToMono(Job.class);
+        job = jobMono.block();
+        
+        return job.getId() == null ? null : job;
     }
 }

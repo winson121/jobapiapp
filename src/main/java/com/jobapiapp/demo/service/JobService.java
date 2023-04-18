@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface JobService {
     List<JobDTO> getJobs();
+
+    JobDTO getJob(String id);
 }
