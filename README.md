@@ -8,7 +8,7 @@ User can access the API for register and authenticate from these URL:
 both API above use the POST method.
 
 to get the data for job list, and job detail for a specific id, user can access the API through the these link with GET method:
-- `http://localhost:7777/api/job/{id}
+- `http://localhost:7777/api/job/{id}`
 - `http://localhost:7777/api/jobs`
 
 to access the job list and job api, user must include the `Authorization` key to the header with the jwt token prefixed by `Bearer ` (e.g. `Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY4MTg1NzIzNCwiaWF0IjoxNjgxODM5MjM0fQ.XaiYBY8xK206uDsSOeonliakcOkIM1PJtnJdN-rnvZIlIAaVeKeewiUvDncLIrE7pu-5KEbHBvlfSd1hvJLhqg`.
