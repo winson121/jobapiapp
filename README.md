@@ -11,4 +11,4 @@ to get the data for job list, and job detail for a specific id, user can access 
 - `http://localhost:7777/api/job/{id}
 - `http://localhost:7777/api/jobs`
 
-to access the job list and job api, user must include the `Authorization` key to the header with the jwt token prefixed by `Bearer ` (e.g. `Bearer eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY4MTg1NTM1NSwiaWF0IjoxNjgxODU1MzU1fQ.NKRX2hZlJSnoDkNG2tZSHi8Uqp3XHk_X_XWDK0kO5fA`.
+to access the job list and job api, user must include the `Authorization` key to the header with the jwt token prefixed by `Bearer ` (e.g. `Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY4MTg1NzIzNCwiaWF0IjoxNjgxODM5MjM0fQ.XaiYBY8xK206uDsSOeonliakcOkIM1PJtnJdN-rnvZIlIAaVeKeewiUvDncLIrE7pu-5KEbHBvlfSd1hvJLhqg`.
